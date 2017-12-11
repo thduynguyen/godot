@@ -51,7 +51,8 @@ for x in glob.glob("platform/*"):
     sys.path.remove(tmppath)
     sys.modules.pop('detect')
 
-module_list = methods.detect_modules()
+#module_list = methods.detect_modules()
+module_list = ["godotvis"]
 
 
 # print "Detected Platforms: "+str(platform_list)
@@ -451,14 +452,14 @@ if selected_platform in platform_list:
     SConscript("core/SCsub")
     SConscript("servers/SCsub")
     SConscript("scene/SCsub")
-    SConscript("editor/SCsub")
+    #SConscript("editor/SCsub")
     SConscript("drivers/SCsub")
 
-    SConscript("platform/SCsub")
+    #SConscript("platform/SCsub")
     SConscript("modules/SCsub")
-    SConscript("main/SCsub")
+    #SConscript("main/SCsub")
 
-    SConscript("platform/" + selected_platform + "/SCsub")  # build selected platform
+    #SConscript("platform/" + selected_platform + "/SCsub")  # build selected platform
 
     # Microsoft Visual Studio Project Generation
     if env['vsproj']:

@@ -27,11 +27,11 @@
 /* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE     */
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
+#define STB_TRUETYPE_IMPLEMENTATION
 #include "dynamic_font_stb.h"
 
 #ifndef FREETYPE_ENABLED
 
-#define STB_TRUETYPE_IMPLEMENTATION
 #include "os/file_access.h"
 
 void DynamicFontData::lock() {
